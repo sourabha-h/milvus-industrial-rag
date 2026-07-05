@@ -1,0 +1,8 @@
+pymilvus
+python-dotenv
+sentence-transformers
+fastapi
+uvicorn
+pandas
+numpy
+tqdm

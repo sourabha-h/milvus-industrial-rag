@@ -1,0 +1,42 @@
+# Local environment
+.env
+.venv/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# Local database and storage artifacts
+*.db
+*.sqlite
+*.sqlite3
+.milvus/
+docker/volumes/
+
+# Generated and temporary project data
+data/raw/
+data/temp/
+data/processed/
+data/benchmark/raw_txt/
+data/benchmark/results/
+data/rag/rag_audit_log.jsonl
+Notes.txt
+Milvus Industrial RAG Project.docx
+
+# Logs
+*.log
+*.err
+
+# Model and dependency caches
+.cache/
+.cache/huggingface/
+.cache/torch/
+.cache/sentence_transformers/
+.hf/
+hf_cache/
+models/
