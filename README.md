@@ -9,6 +9,24 @@ Milvus Industrial RAG is a portfolio-ready retrieval augmented generation projec
 - Generates grounded RAG answers from retrieved chunks
 - Records benchmark runs and RAG audit traces
 
+## Architecture Flow
+
+Milvus stores embeddings plus metadata for traceable retrieval across ingestion, search, and answer generation. Guardrails validate whether retrieved context is relevant before generating or accepting an answer.
+
+```mermaid
+flowchart LR
+    A[Documents / TXT files] --> B[Loader]
+    B --> C[Normalizer]
+    C --> D[Chunker]
+    D --> E[Metadata extractor]
+    E --> F[Embedding service]
+    F --> G[Milvus collection]
+    G --> H[Semantic / filtered / hybrid search]
+    H --> I[RAG answer generation]
+    I --> J[Relevance guardrail]
+    J --> K[Final answer with retrieved evidence]
+```
+
 ## Project Structure
 
 - `app/collections/` Milvus collection setup and teardown scripts
